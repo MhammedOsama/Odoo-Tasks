@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_document_inherit" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@name='so_total_summary']" position="before">
+            <div t-if="doc.delivery_note" class="mt-4">
+                <strong>Delivery Note:</strong>
+                <p t-field="doc.delivery_note" style="white-space: pre-wrap;"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>
+
